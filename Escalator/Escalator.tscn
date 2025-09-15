@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://dtl0qla7fbpq2"]
+[gd_scene load_steps=34 format=3 uid="uid://dtl0qla7fbpq2"]
 
 [ext_resource type="Script" uid="uid://bfn31iyxwdx4w" path="res://Escalator/escalator.gd" id="1_ly4k6"]
 [ext_resource type="Texture2D" uid="uid://bx4srv08a8oct" path="res://Escalator/Assets/Capi resting.png" id="1_pmlx7"]
 [ext_resource type="Texture2D" uid="uid://dlqbwxd674p72" path="res://Escalator/Assets/capi jumping.png" id="2_ly4k6"]
 [ext_resource type="Texture2D" uid="uid://ygin4gnxufcq" path="res://Escalator/Assets/CAPI walking.png" id="3_j50fp"]
+[ext_resource type="AudioStream" uid="uid://b7h7drs2ioamc" path="res://Escalator/Assets/mixkit-impact-of-a-blow-2150.wav" id="5_j50fp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksona"]
 atlas = ExtResource("1_pmlx7")
@@ -252,5 +253,8 @@ initial_velocity_max = 227.94
 angle_min = -81.0
 angle_max = 217.1
 color = Color(1, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_j50fp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

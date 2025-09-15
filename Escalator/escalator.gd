@@ -55,7 +55,8 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Ow!")
-	$CPUParticles2D.emitting = true # Replace with function body.
+	$CPUParticles2D.emitting = true
+	$AudioStreamPlayer.play() # Replace with function body.
 	beenHit.emit();
 
 func doSomething() -> void:
